@@ -1,0 +1,159 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProductVersion>9.0.30729</ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{DDB91F63-09A8-47A3-9685-7D7EB1F99BCF}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>Shelland.ImagingLibrary</RootNamespace>
+    <AssemblyName>Shelland.ImagingLibrary</AssemblyName>
+    <TargetFrameworkVersion>v3.5</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <SignAssembly>true</SignAssembly>
+    <AssemblyOriginatorKeyFile>Key.snk</AssemblyOriginatorKeyFile>
+    <FileUpgradeFlags>
+    </FileUpgradeFlags>
+    <UpgradeBackupLocation>
+    </UpgradeBackupLocation>
+    <OldToolsVersion>3.5</OldToolsVersion>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <AllowUnsafeBlocks>true</AllowUnsafeBlocks>
+    <DocumentationFile>bin\Debug\Shelland.ImagingLibrary.XML</DocumentationFile>
+    <CodeAnalysisRuleSet>AllRules.ruleset</CodeAnalysisRuleSet>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <AllowUnsafeBlocks>true</AllowUnsafeBlocks>
+    <CodeAnalysisRuleSet>AllRules.ruleset</CodeAnalysisRuleSet>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="System" />
+    <Reference Include="System.Core">
+      <RequiredTargetFramework>3.5</RequiredTargetFramework>
+    </Reference>
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xml.Linq">
+      <RequiredTargetFramework>3.5</RequiredTargetFramework>
+    </Reference>
+    <Reference Include="System.Data.DataSetExtensions">
+      <RequiredTargetFramework>3.5</RequiredTargetFramework>
+    </Reference>
+    <Reference Include="System.Data" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Commands\Processing\BatchImageEffects.cs" />
+    <Compile Include="Commands\Processing\BatchProcessing.cs" />
+    <Compile Include="Commands\Effects\LaplacianEmbossCommand.cs" />
+    <Compile Include="Commands\Effects\MeanRemovalCommand.cs" />
+    <Compile Include="Commands\Effects\QuickEdgeDetectCommand.cs" />
+    <Compile Include="Commands\Formats\TargaReaderCommand.cs" />
+    <Compile Include="Commands\Processing\AnimatedGIF\AnimatedGifEncoder.cs" />
+    <Compile Include="Commands\Processing\AnimatedGIF\GifAnimationCommand.cs" />
+    <Compile Include="Commands\Processing\AnimatedGIF\GifDecoder.cs" />
+    <Compile Include="Commands\Processing\AnimatedGIF\LZWEncoder.cs" />
+    <Compile Include="Commands\Processing\AnimatedGIF\NeuQuant.cs" />
+    <Compile Include="Commands\Processing\BrightnessCommand.cs" />
+    <Compile Include="Commands\Processing\ColorCommand.cs" />
+    <Compile Include="Commands\Processing\ContrastCommand.cs" />
+    <Compile Include="Commands\Effects\FlipCommand.cs" />
+    <Compile Include="Commands\Effects\RandomJitterCommand.cs" />
+    <Compile Include="Commands\Effects\SphereCommand.cs" />
+    <Compile Include="Commands\Effects\SwirlCommand.cs" />
+    <Compile Include="Commands\Processing\EXIF\BitConverterEx.cs" />
+    <Compile Include="Commands\Processing\EXIF\ExifBitConverter.cs" />
+    <Compile Include="Commands\Processing\EXIF\ExifEnums.cs" />
+    <Compile Include="Commands\Processing\EXIF\ExifExceptions.cs" />
+    <Compile Include="Commands\Processing\EXIF\ExifExtendedProperty.cs" />
+    <Compile Include="Commands\Processing\EXIF\ExifExtensionMethods.cs" />
+    <Compile Include="Commands\Processing\EXIF\ExifFileTypeDescriptor.cs" />
+    <Compile Include="Commands\Processing\EXIF\ExifInterOperability.cs" />
+    <Compile Include="Commands\Processing\EXIF\ExifProperty.cs" />
+    <Compile Include="Commands\Processing\EXIF\ExifPropertyCollection.cs" />
+    <Compile Include="Commands\Processing\EXIF\ExifPropertyFactory.cs" />
+    <Compile Include="Commands\Processing\EXIF\ExifTag.cs" />
+    <Compile Include="Commands\Processing\EXIF\ExifTagFactory.cs" />
+    <Compile Include="Commands\Processing\EXIF\IFD.cs" />
+    <Compile Include="Commands\Processing\EXIF\ImageFile.cs" />
+    <Compile Include="Commands\Processing\EXIF\ImageFileDirectory.cs" />
+    <Compile Include="Commands\Processing\EXIF\ImageFileDirectoryEntry.cs" />
+    <Compile Include="Commands\Processing\EXIF\ImageFileFormat.cs" />
+    <Compile Include="Commands\Processing\EXIF\JFIFEnums.cs" />
+    <Compile Include="Commands\Processing\EXIF\JFIFExtendedProperty.cs" />
+    <Compile Include="Commands\Processing\EXIF\JFIFThumbnail.cs" />
+    <Compile Include="Commands\Processing\EXIF\JPEGExceptions.cs" />
+    <Compile Include="Commands\Processing\EXIF\JPEGFile.cs" />
+    <Compile Include="Commands\Processing\EXIF\JPEGMarker.cs" />
+    <Compile Include="Commands\Processing\EXIF\JPEGSection.cs" />
+    <Compile Include="Commands\Processing\EXIF\MathEx.cs" />
+    <Compile Include="Commands\Processing\EXIF\TIFFFile.cs" />
+    <Compile Include="Commands\Processing\EXIF\TIFFHeader.cs" />
+    <Compile Include="Commands\Processing\EXIF\TIFFStrip.cs" />
+    <Compile Include="Commands\Processing\EXIF\Utility.cs" />
+    <Compile Include="Commands\Processing\Resample\InternalResamplingService.cs" />
+    <Compile Include="Commands\Shared\ConvolutionMatrix.cs" />
+    <Compile Include="Commands\Processing\GammaCommand.cs" />
+    <Compile Include="Commands\Effects\GaussianBlurCommand.cs" />
+    <Compile Include="Commands\Effects\GrayscaleCommand.cs" />
+    <Compile Include="Commands\Processing\HueCommand.cs" />
+    <Compile Include="Commands\Effects\InvertCommand.cs" />
+    <Compile Include="Commands\Processing\LuminanceCommand.cs" />
+    <Compile Include="Commands\Effects\MoireCommand.cs" />
+    <Compile Include="Commands\Effects\OffsetAbsCommand.cs" />
+    <Compile Include="Commands\Effects\OffsetAntialiasCommand.cs" />
+    <Compile Include="Commands\Effects\OffsetCommand.cs" />
+    <Compile Include="Commands\Effects\PixelateCommand.cs" />
+    <Compile Include="Commands\Processing\SaturationCommand.cs" />
+    <Compile Include="Commands\Effects\SharpenCommand.cs" />
+    <Compile Include="Commands\Effects\SmoothCommand.cs" />
+    <Compile Include="Commands\Effects\TimeWarpCommand.cs" />
+    <Compile Include="Commands\Effects\WaterEffectCommand.cs" />
+    <Compile Include="Commands\Formats\PsdReaderCommand.cs" />
+    <Compile Include="Commands\Shared\IImageProcessing.cs" />
+    <Compile Include="Commands\Processing\Resample\ResampleCommand.cs" />
+    <Compile Include="Commands\Shared\SharedEffects.cs" />
+    <Compile Include="Commands\SystemTasks\ScreenshotCommand.cs" />
+    <Compile Include="Forms\Form_About.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\Form_About.Designer.cs">
+      <DependentUpon>Form_About.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Commands\Shared\HSL.cs" />
+    <Compile Include="Commands\Shared\ILException.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="Forms\Form_About.resx">
+      <DependentUpon>Form_About.cs</DependentUpon>
+    </EmbeddedResource>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Key.snk" />
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>
